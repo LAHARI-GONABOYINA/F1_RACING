@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Visualizations | F1 Racing</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    padding: 50px 8%;
+    background: linear-gradient(135deg, #111111, #1b1b1b);
+    border-bottom: 2px solid #e10600;
+}
+
+.back {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.back:hover {
+    color: #e10600;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #bbbbbb;
+    font-size: 17px;
+}
+
+.container {
+    width: 84%;
+    margin: 40px auto;
+}
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e10600;
+    padding-left: 12px;
+}
+
+.section p {
+    color: #cccccc;
+    font-size: 16px;
+    max-width: 1050px;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.chart-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    border-color: #e10600;
+}
+
+.chart-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.chart-card p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.chart-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.view-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.view-button:hover {
+    background: #b80500;
+}
+
+.result {
+    background: #151515;
+    border-left: 4px solid #e10600;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.result p {
+    margin-bottom: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #292929;
+    color: #888888;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<a href="../index.html" class="back">
+← Back to F1 Racing
+</a>
+
+<h1>VISUALIZATIONS</h1>
+
+<p class="subtitle">
+Charts and visual representations of the F1 product analysis
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="section">
+
+<h2>What We Did</h2>
+
+<p>
+The visualization stage converts the results of the technical
+and performance analysis into charts and graphs. These
+visualizations make season comparisons, team performance
+changes and technical changes easier to understand.
+</p>
+
+</div>
+
+
+<!-- VISUALIZATION CATEGORIES -->
+
+<div class="section">
+
+<h2>Visualization Categories</h2>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+
+<h3>Technical Analysis</h3>
+
+<p>
+Visual comparison of McLaren technical specifications
+between seasons.
+</p>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Performance Analysis</h3>
+
+<p>
+Charts showing championship points, race wins and
+team performance.
+</p>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Technical vs Performance</h3>
+
+<p>
+Charts comparing technical changes with performance
+changes.
+</p>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Final Dashboard</h3>
+
+<p>
+A consolidated dashboard presenting the major findings
+of the project.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MCLAREN ANALYSIS -->
+
+<div class="section">
+
+<h2>McLaren Analysis</h2>
+
+<div class="chart-grid">
+
+
+<div class="chart-card">
+
+<h3>McLaren Points Comparison</h3>
+
+<p>
+Championship points comparison between 2024 and 2025.
+</p>
+
+<img src="12_mclaren_points_comparison.png"
+     alt="McLaren Points Comparison">
+
+<a href="12_mclaren_points_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>McLaren Wins Comparison</h3>
+
+<p>
+Race wins comparison between the two seasons.
+</p>
+
+<img src="12_mclaren_wins_comparison.png"
+     alt="McLaren Wins Comparison">
+
+<a href="12_mclaren_wins_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>McLaren Weight Comparison</h3>
+
+<p>
+Comparison of recorded McLaren car weight.
+</p>
+
+<img src="12_mclaren_weight_comparison.png"
+     alt="McLaren Weight Comparison">
+
+<a href="12_mclaren_weight_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Performance Change</h3>
+
+<p>
+Percentage change in McLaren performance.
+</p>
+
+<img src="13_mclaren_performance_change.png"
+     alt="McLaren Performance Change">
+
+<a href="13_mclaren_performance_change.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Technical Changes</h3>
+
+<p>
+Observed technical changes between seasons.
+</p>
+
+<img src="13_mclaren_technical_changes.png"
+     alt="McLaren Technical Changes">
+
+<a href="13_mclaren_technical_changes.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEAM COMPARISON -->
+
+<div class="section">
+
+<h2>Team Performance Comparison</h2>
+
+<div class="chart-grid">
+
+
+<div class="chart-card">
+
+<h3>Team Points Comparison</h3>
+
+<p>
+McLaren and Mercedes championship points comparison.
+</p>
+
+<img src="16_team_points_comparison.png"
+     alt="Team Points Comparison">
+
+<a href="16_team_points_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Team Wins Comparison</h3>
+
+<p>
+McLaren and Mercedes race wins comparison.
+</p>
+
+<img src="16_team_wins_comparison.png"
+     alt="Team Wins Comparison">
+
+<a href="16_team_wins_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Team Points Trend</h3>
+
+<p>
+Season-to-season championship points trend.
+</p>
+
+<img src="20_team_points_trend.png"
+     alt="Team Points Trend">
+
+<a href="20_team_points_trend.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Team Wins Trend</h3>
+
+<p>
+Season-to-season race wins trend.
+</p>
+
+<img src="20_team_wins_trend.png"
+     alt="Team Wins Trend">
+
+<a href="20_team_wins_trend.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TECHNICAL VS PERFORMANCE -->
+
+<div class="section">
+
+<h2>Technical vs Performance</h2>
+
+<div class="chart-grid">
+
+
+<div class="chart-card">
+
+<h3>Weight vs Points</h3>
+
+<p>
+Comparison of car weight and championship points.
+</p>
+
+<img src="17_weight_vs_points.png"
+     alt="Weight vs Points">
+
+<a href="17_weight_vs_points.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Wins vs Points</h3>
+
+<p>
+Relationship between race wins and championship points.
+</p>
+
+<img src="17_wins_vs_points.png"
+     alt="Wins vs Points">
+
+<a href="17_wins_vs_points.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Quantitative Performance</h3>
+
+<p>
+Quantitative performance comparison.
+</p>
+
+<img src="18_quantitative_performance.png"
+     alt="Quantitative Performance">
+
+<a href="18_quantitative_performance.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Performance Percentage Change</h3>
+
+<p>
+Percentage changes in the selected performance measures.
+</p>
+
+<img src="19_performance_percentage_change.png"
+     alt="Performance Percentage Change">
+
+<a href="19_performance_percentage_change.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Technical Percentage Change</h3>
+
+<p>
+Percentage changes in selected technical measures.
+</p>
+
+<img src="19_technical_percentage_change.png"
+     alt="Technical Percentage Change">
+
+<a href="19_technical_percentage_change.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FINAL VISUALIZATIONS -->
+
+<div class="section">
+
+<h2>Final Project Visualizations</h2>
+
+<div class="chart-grid">
+
+
+<div class="chart-card">
+
+<h3>Final Performance Comparison</h3>
+
+<p>
+Final comparison of the major performance results.
+</p>
+
+<img src="14_final_performance_comparison.png"
+     alt="Final Performance Comparison">
+
+<a href="14_final_performance_comparison.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>Final Technical Changes</h3>
+
+<p>
+Final visualization of the technical changes identified
+during the analysis.
+</p>
+
+<img src="14_final_technical_changes.png"
+     alt="Final Technical Changes">
+
+<a href="14_final_technical_changes.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>McLaren Final Points</h3>
+
+<p>
+Final McLaren championship points comparison.
+</p>
+
+<img src="20_mclaren_points_final.png"
+     alt="McLaren Final Points">
+
+<a href="20_mclaren_points_final.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+
+<div class="chart-card">
+
+<h3>McLaren Final Technical Changes</h3>
+
+<p>
+Final McLaren technical change visualization.
+</p>
+
+<img src="20_mclaren_technical_changes_final.png"
+     alt="McLaren Final Technical Changes">
+
+<a href="20_mclaren_technical_changes_final.png"
+   target="_blank"
+   class="view-button">
+View Full Chart
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CONCLUSION -->
+
+<div class="section">
+
+<h2>Visualization Summary</h2>
+
+<div class="result">
+
+<p>
+The visualizations provide a clear representation of the
+technical and performance analysis performed in the project.
+</p>
+
+<p>
+The charts show McLaren's increase in championship points
+and race wins between 2024 and 2025, along with the
+observed technical changes.
+</p>
+
+<p>
+Team comparison charts also show the performance differences
+between McLaren and Mercedes across the analyzed seasons.
+</p>
+
+<p>
+The visualizations are intended to make the final findings
+easy to understand and suitable for project demonstration.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FINAL DASHBOARD -->
+
+<div class="section">
+
+<h2>Final Dashboard</h2>
+
+<div class="result">
+
+<p>
+The final dashboard combines the major technical,
+performance and comparison results into a single
+visual summary.
+</p>
+
+<a href="../09_Final_Results/final_f1_dashboard.png"
+   target="_blank"
+   class="view-button">
+View Final Dashboard →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- NEXT STEP -->
+
+<div class="section">
+
+<h2>Next Step</h2>
+
+<p>
+The next stage is Final Results, where the project's
+key findings, conclusion and final dashboard are presented.
+</p>
+
+<a href="../09_Final_Results/index.html"
+   class="view-button">
+Go to Final Results →
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+F1 Racing — Web Scraping & Product Analysis System
+
+</footer>
+
+
+</body>
+
+</html>

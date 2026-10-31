@@ -1,0 +1,124 @@
+Season,Team,Car,Specification,Value
+2024,McLaren,MCL38,CHASSIS,
+2024,McLaren,MCL38,Monocoque,"Carbon-fibre composite, incorporating driver controls and fuel cell"
+2024,McLaren,MCL38,Safety structures,"Cockpit survival cell incorporating impact resistant construction and anti-penetration panels, front impact structure, prescribed side impact structures, integrated rear impact structure, front and rear roll structures, halo secondary roll structure, driver headrest protection and safety seat"
+2024,McLaren,MCL38,Bodywork,"Carbon-fibre composite, including engine cover, sidepods, floor, nose, front wing and rear wing with driver-operated drag reduction system"
+2024,McLaren,MCL38,Front suspension,"Carbon-fibre / titanium suspension legs, pullrod operating inboard torsion bar, spring and damper system"
+2024,McLaren,MCL38,Rear suspension,"Carbon-fibre / titanium suspension legs, pushrod operating inboard torsion bar, spring and damper system"
+2024,McLaren,MCL38,Weight,"Overall vehicle weight 798 kg (including driver, excluding fuel)"
+2024,McLaren,MCL38,Weight distribution between,44.6% and 46.1% on front axle
+2024,McLaren,MCL38,Electronics,"McLaren Applied. Including chassis control, power unit control, data acquisition, sensors, data analysis"
+2024,McLaren,MCL38,Instruments,McLaren Applied steering wheel display
+2024,McLaren,MCL38,Brake system,"Six piston brake calipers with front / rear master cylinders
+
+   ‘Brake by wire’ rear brake control system
+
+   Carbon-carbon ventilated discs and pads"
+2024,McLaren,MCL38,Steering,Power-assisted rack and pinion
+2024,McLaren,MCL38,Tyres,"Pirelli P Zero F1. Now with an additional compound, the C0 – bringing our total to six compounds in the pool. Pirelli select three for each event. FSC-certified (Forest Stewardship Council)."
+2024,McLaren,MCL38,Race wheels,BBS standardised design 18” magnesium wheels
+2024,McLaren,MCL38,Cooling systems,"Charge air, engine oil, gearbox oil, hydraulic oil, water, and ERS cooling systems"
+2024,McLaren,MCL38,Additive Manufacturing,Stratasys 3D printing & additive manufacturing
+2024,McLaren,MCL38,Power Unit type,Mercedes-AMG M14 E Performance
+2024,McLaren,MCL38,Minimum weight,151kg
+2024,McLaren,MCL38,Primary PU components,Internal combustion engine (ICE)
+2024,McLaren,MCL38,"Primary PU components
+
+   INTERNAL COMBUSTION ENGINE","Motor Generator Unit – Kinetic (MGU-K)
+
+   Motor Generator Unit – Heat (MGU-H)
+
+   Turbocharger (TC)
+
+   Energy Store (ES) 
+
+   Control Electronics (CE)"
+2024,McLaren,MCL38,Capacity,1.6 litres
+2024,McLaren,MCL38,Cylinders,Six
+2024,McLaren,MCL38,Bank angle,90 degree vee angle
+2024,McLaren,MCL38,No of valves,24
+2024,McLaren,MCL38,Max speed,"15,000 rpm"
+2024,McLaren,MCL38,Max fuel flow rate,"100kg/hour (above 10,500 rpm)"
+2024,McLaren,MCL38,Fuel injection,"High-pressure direct injection (max 500 bar, one injector/cylinder)"
+2024,McLaren,MCL38,Pressure charging,"Single-stage compressor and exhaust turbine, on a common shaft"
+2024,McLaren,MCL38,,"Max rpm Exhaust Turbine 125,000 rpm"
+2024,McLaren,MCL38,ENERGY RECOVERY SYSTEM,
+2024,McLaren,MCL38,Architecture,Integrated hybrid energy recovery via motor generator units
+2024,McLaren,MCL38,"Architecture
+
+   Energy store","Crankshaft coupled electrical MGU-K
+
+   Turbocharger coupled electrical MGU-H 
+
+   Lithium-Ion battery solution of minimum 20 kg regulation weight"
+2024,McLaren,MCL38,"Energy store
+
+   MGU-K","Maximum energy storage, 4 MJ per lap 
+
+   Maximum speed, 50,000 rpm"
+2024,McLaren,MCL38,"MGU-K
+
+   MGU-H","Maximum power, 120 kW
+
+   Maximum energy recovery, 2 MJ per lap
+
+   Maximum energy deployment, 4 MJ per lap 
+
+   Maximum speed 125,000 rpm"
+2024,McLaren,MCL38,"MGU-H
+
+   TRANSMISSION","Maximum power, unlimited
+
+   Maximum energy recovery, unlimited
+
+   Maximum energy deployment, unlimited"
+2024,McLaren,MCL38,Gearbox,"Carbon-fibre composite gearbox casing,"
+2024,McLaren,MCL38,"Gearbox
+
+   Gear ratios","longitudinally mounted change gear cluster 
+
+   Eight forward and one reverse"
+2024,McLaren,MCL38,Gear selection,Electro-hydraulically operated seamless shift
+2024,McLaren,MCL38,Differential,Limited slip friction clutch epicyclic
+2024,McLaren,MCL38,Clutch,"Electro-hydraulically operated, carbon multi-plate"
+2024,McLaren,MCL38,LOGISTICS,
+2024,McLaren,MCL38,Transport,Mercedes-Benz trucks
+2024,McLaren,MCL38,Logistics,DP World
+2025,McLaren,MCL39,Monocoque,"Carbon-fibre composite, incorporating driver controls and fuel cell"
+2025,McLaren,MCL39,Safety structures,"Cockpit survival cell incorporating impact resistant construction and anti-penetration panels, front impact structure, prescribed side impact structures, integrated rear impact structure, front and rear roll structures, halo secondary roll structure, driver headrest protection and safety seat"
+2025,McLaren,MCL39,Bodywork,"Carbon-fibre composite, including engine cover, sidepods, floor, nose, front wing and rear wing with driver-operated drag reduction system"
+2025,McLaren,MCL39,Front suspension,"Carbon-fibre / titanium suspension legs, pullrod operating inboard torsion bar, spring and damper system"
+2025,McLaren,MCL39,Rear suspension,"Carbon-fibre / titanium suspension legs, pushrod operating inboard torsion bar, spring and damper system"
+2025,McLaren,MCL39,Weight,"Overall vehicle weight 800 kg (including driver, excluding fuel)"
+2025,McLaren,MCL39,Weight distribution between,44.6% and 46.1% on front axle
+2025,McLaren,MCL39,Electronics,"McLaren Applied. Including chassis control, power unit control, data acquisition, sensors, data analysis"
+2025,McLaren,MCL39,Instruments,McLaren Applied steering wheel display
+2025,McLaren,MCL39,Brake system,Six piston brake calipers with front / rear master cylinders ‘Brake by wire’ rear brake control system Carbon-carbon ventilated discs and pads
+2025,McLaren,MCL39,Steering,Power-assisted rack and pinion
+2025,McLaren,MCL39,Tyres,Pirelli P Zero F1. Six compounds in the pool. Pirelli select three for each event.
+2025,McLaren,MCL39,Race wheels,BBS standardised design 18” magnesium wheels
+2025,McLaren,MCL39,Paint,AkzoNobel Sikkens products
+2025,McLaren,MCL39,Cooling systems,"Charge air, engine oil, gearbox oil, hydraulic oil, water, and ERS cooling systems"
+2025,McLaren,MCL39,Additive Manufacturing,Stratasys 3D printing & additive manufacturing
+2025,McLaren,MCL39,Power Unit type,Mercedes-AMG M16 E Performance
+2025,McLaren,MCL39,Minimum weight,151kg
+2025,McLaren,MCL39,Primary PU components,Internal combustion engine (ICE) Motor Generator Unit – Kinetic (MGU-K) Motor Generator Unit – Heat (MGU-H) Turbocharger (TC) Energy Store (ES) Control Electronics (CE)
+2025,McLaren,MCL39,Capacity,1.6 litres
+2025,McLaren,MCL39,Cylinders,Six
+2025,McLaren,MCL39,Bank angle,90 degree vee angle
+2025,McLaren,MCL39,No of valves,24
+2025,McLaren,MCL39,Max speed,"15,000 rpm"
+2025,McLaren,MCL39,Max fuel flow rate,"100kg/hour (above 10,500 rpm)"
+2025,McLaren,MCL39,Fuel injection,"High-pressure direct injection (max 500 bar, one injector/cylinder)"
+2025,McLaren,MCL39,Pressure charging,"Single-stage compressor and exhaust turbine, on a common shaft"
+2025,McLaren,MCL39,,"Max rpm Exhaust Turbine 125,000 rpm"
+2025,McLaren,MCL39,Architecture,Integrated hybrid energy recovery via motor generator units Crankshaft coupled electrical MGU-K Turbocharger coupled electrical MGU-H
+2025,McLaren,MCL39,Energy store,"Lithium-Ion battery solution of minimum 20 kg regulation weight Maximum energy storage, 4 MJ per lap"
+2025,McLaren,MCL39,MGU-K,"Maximum speed, 50,000 rpm Maximum power, 120 kW Maximum energy recovery, 2 MJ per lap Maximum energy deployment, 4 MJ per lap"
+2025,McLaren,MCL39,MGU-H,"Maximum speed 125,000 rpm Maximum power, unlimited Maximum energy recovery, unlimited Maximum energy deployment, unlimited"
+2025,McLaren,MCL39,Gearbox,"Carbon-fibre composite gearbox casing, longitudinally mounted change gear cluster"
+2025,McLaren,MCL39,Gear ratios,Eight forward and one reverse
+2025,McLaren,MCL39,Gear selection,Electro-hydraulically operated seamless shift
+2025,McLaren,MCL39,Differential,Limited slip friction clutch epicyclic
+2025,McLaren,MCL39,Clutch,"Electro-hydraulically operated, carbon multi-plate"
+2025,McLaren,MCL39,Transport,Mercedes-Benz trucks

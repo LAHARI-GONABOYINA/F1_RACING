@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Racing | Web Scraping & Product Analysis</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+            line-height: 1.6;
+        }
+
+       
+        header {
+            min-height: 430px;
+            padding: 70px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background:
+                linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.85)),
+                url("08_Visualizations/20_team_points_trend.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tag {
+            color: #e10600;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 64px;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            max-width: 700px;
+            color: #bbb;
+            font-size: 17px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 84%;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            border-left: 5px solid #e10600;
+            padding-left: 15px;
+        }
+
+       
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 70px;
+        }
+
+        .stat-card {
+            background: #151515;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #292929;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 30px;
+            color: #e10600;
+            margin-bottom: 8px;
+        }
+
+        .stat-card p {
+            color: #aaa;
+        }
+
+    
+        .overview {
+            background: #121212;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 70px;
+            border: 1px solid #252525;
+        }
+
+        .overview p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #151515;
+            border: 1px solid #292929;
+            border-radius: 12px;
+            padding: 30px;
+            min-height: 220px;
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #e10600;
+            box-shadow: 0 10px 30px rgba(225, 6, 0, 0.18);
+        }
+
+        .card-number {
+            color: #e10600;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 15px;
+        }
+
+        .open-text {
+            position: absolute;
+            bottom: 25px;
+            color: #e10600;
+            font-weight: bold;
+        }
+
+        /* VISUALIZATIONS */
+        .visualizations {
+            margin-top: 80px;
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .visual-card {
+            background: #151515;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #292929;
+        }
+
+        .visual-card img {
+            width: 100%;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .visual-card img:hover {
+            transform: scale(1.02);
+        }
+
+        .visual-card h4 {
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        .final-dashboard {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .dashboard-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #e10600;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .dashboard-button:hover {
+            background: #b80400;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            background: #080808;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            font-size: 40px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media (max-width: 900px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .workflow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .visual-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 42px;
+            }
+
+            .stats,
+            .workflow,
+            .visual-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="tag">FORMULA 1 • DATA ANALYTICS</div>
+
+        <h1>F1 RACING</h1>
+
+        <h2>WEB SCRAPING & PRODUCT ANALYSIS SYSTEM</h2>
+
+        <p>
+            A data analytics project focused on collecting Formula 1
+            technical specifications, team performance and race-result
+            information from web sources and analyzing the data to
+            understand product and performance trends.
+        </p>
+    </header>
+
+
+    <div class="container">
+
+        <h2 class="section-title">Project Overview</h2>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>2024</h3>
+                <p>McLaren MCL38</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>2025</h3>
+                <p>McLaren MCL39</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>+25.08%</h3>
+                <p>Points Increase</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>+133.33%</h3>
+                <p>Wins Increase</p>
+            </div>
+
+        </div>
+
+
+        <div class="overview">
+
+            <p>
+                This project follows a complete data workflow:
+                web scraping, raw data collection, data cleaning,
+                data structuring, technical analysis, performance
+                analysis, technical-versus-performance analysis,
+                visualization and final results.
+            </p>
+
+        </div>
+
+
+        <h2 class="section-title">Project Workflow</h2>
+
+        <div class="workflow">
+
+
+            <div class="card"
+                 onclick="window.location.href='01_Web_Scraping/index.html'">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    Web Scraping
+                </h3>
+
+                <p>
+                    Collect Formula 1 technical specifications,
+                    team performance and race-result information
+                    from web sources.
+                </p>
+
+                <div class="open-text">
+                    View process →
+                </div>
+
+            </div>
+
+
+           <div class="card"
+     onclick="window.location.href='02_Raw_Data/index.html'">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Raw Data
+                </h3>
+
+                <p>
+                    Store the information collected directly
+                    from the web before processing and analysis.
+                </p>
+
+                <div class="open-text">
+                    View data →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card"
+     onclick="window.location.href='03_Data_Cleaning/index.html'">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Data Cleaning
+                </h3>
+
+                <p>
+                    Clean extracted values, remove inconsistencies
+                    and prepare the datasets for analysis.
+                </p>
+
+                <div class="open-text">
+                    View process →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+           <div class="card"
+     onclick="window.location.href='04_Data_Structuring/index.html'">
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <h3>
+                    Data Structuring
+                </h3>
+
+                <p>
+                    Organize the cleaned information into structured
+                    datasets suitable for analysis.
+                </p>
+
+                <div class="open-text">
+                    View structure →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 5 -->
+            <div class="card"
+     onclick="window.location.href='05_Technical_Analysis/index.html'">
+
+                <div class="card-number">
+                    05
+                </div>
+
+                <h3>
+                    Technical Analysis
+                </h3>
+
+                <p>
+                    Analyze Formula 1 car specifications and
+                    compare technical changes between seasons.
+                </p>
+
+                <div class="open-text">
+                    View analysis →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 6 -->
+            <div class="card"
+     onclick="window.location.href='06_Performance_Analysis/index.html'">
+
+                <div class="card-number">
+                    06
+                </div>
+
+                <h3>
+                    Performance Analysis
+                </h3>
+
+                <p>
+                    Analyze team points, race wins and performance
+                    trends across Formula 1 seasons.
+                </p>
+
+                <div class="open-text">
+                    View analysis →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 7 -->
+           <div class="card"
+     onclick="window.location.href='07_Technical_vs_Performance/index.html'">
+
+                <div class="card-number">
+                    07
+                </div>
+
+                <h3>
+                    Technical vs Performance
+                </h3>
+
+                <p>
+                    Compare technical changes with performance
+                    changes to identify possible relationships.
+                </p>
+
+                <div class="open-text">
+                    View comparison →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 8 -->
+            <div class="card"
+     onclick="window.location.href='08_Visualizations/index.html'">
+
+                <div class="card-number">
+                    08
+                </div>
+
+                <h3>
+                    Visualizations
+                </h3>
+
+                <p>
+                    Explore charts and graphs created from the
+                    analyzed Formula 1 datasets.
+                </p>
+
+                <div class="open-text">
+                    View charts →
+                </div>
+
+            </div>
+
+
+            <!-- CARD 9 -->
+            <div class="card"
+     onclick="window.location.href='09_Final_Results/index.html'">
+                <div class="card-number">
+                    09
+                </div>
+
+                <h3>
+                    Final Results
+                </h3>
+
+                <p>
+                    View the final findings, performance comparison
+                    and overall project dashboard.
+                </p>
+
+                <div class="open-text">
+                    View dashboard →
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VISUALIZATIONS -->
+        <div class="visualizations">
+
+            <h2 class="section-title">
+                Key Visualizations
+            </h2>
+
+            <div class="visual-grid">
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/12_mclaren_points_comparison.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>McLaren Points Comparison</h4>
+                </div>
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/12_mclaren_wins_comparison.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>McLaren Wins Comparison</h4>
+                </div>
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/12_mclaren_weight_comparison.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>McLaren Weight Comparison</h4>
+                </div>
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/16_team_points_comparison.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>Team Points Comparison</h4>
+                </div>
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/16_team_wins_comparison.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>Team Wins Comparison</h4>
+                </div>
+
+
+                <div class="visual-card">
+                    <img
+                        src="08_Visualizations/20_team_points_trend.png"
+                        onclick="openImage(this.src)"
+                    >
+                    <h4>Team Points Trend</h4>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL DASHBOARD -->
+        <div class="final-dashboard">
+
+            <h2 class="section-title">
+                Final Dashboard
+            </h2>
+
+            <p>
+                Explore the complete project dashboard containing
+                the major findings and visual analysis.
+            </p>
+
+            <a
+                class="dashboard-button"
+                href="09_Final_Results/final_f1_dashboard.png"
+                target="_blank"
+            >
+                VIEW FINAL DASHBOARD
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            F1 Racing | Web Scraping & Product Analysis System
+        </p>
+
+        <p>
+            Formula 1 Data Analytics Project
+        </p>
+
+    </footer>
+
+
+    <!-- IMAGE MODAL -->
+    <div class="modal" id="imageModal">
+
+        <span class="close" onclick="closeImage()">
+            &times;
+        </span>
+
+        <img id="modalImage">
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function openImage(src) {
+
+            document.getElementById("imageModal").style.display = "flex";
+
+            document.getElementById("modalImage").src = src;
+
+        }
+
+
+        function closeImage() {
+
+            document.getElementById("imageModal").style.display = "none";
+
+        }
+
+
+        window.onclick = function(event) {
+
+            const modal =
+                document.getElementById("imageModal");
+
+            if (event.target === modal) {
+
+                closeImage();
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

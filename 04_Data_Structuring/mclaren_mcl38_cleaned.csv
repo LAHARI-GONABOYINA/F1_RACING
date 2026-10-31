@@ -1,0 +1,83 @@
+Specification,Value
+Monocoque,"Carbon-fibre composite, incorporating driver controls and fuel cell"
+Safety structures,"Cockpit survival cell incorporating impact resistant construction and anti-penetration panels, front impact structure, prescribed side impact structures, integrated rear impact structure, front and rear roll structures, halo secondary roll structure, driver headrest protection and safety seat"
+Bodywork,"Carbon-fibre composite, including engine cover, sidepods, floor, nose, front wing and rear wing with driver-operated drag reduction system"
+Front suspension,"Carbon-fibre / titanium suspension legs, pullrod operating inboard torsion bar, spring and damper system"
+Rear suspension,"Carbon-fibre / titanium suspension legs, pushrod operating inboard torsion bar, spring and damper system"
+Weight,"Overall vehicle weight 798 kg (including driver, excluding fuel)"
+Weight distribution between,44.6% and 46.1% on front axle
+Electronics,"McLaren Applied. Including chassis control, power unit control, data acquisition, sensors, data analysis"
+Instruments,McLaren Applied steering wheel display
+Brake system,"Six piston brake calipers with front / rear master cylinders
+
+   ‘Brake by wire’ rear brake control system
+
+   Carbon-carbon ventilated discs and pads"
+Steering,Power-assisted rack and pinion
+Tyres,"Pirelli P Zero F1. Now with an additional compound, the C0 – bringing our total to six compounds in the pool. Pirelli select three for each event. FSC-certified (Forest Stewardship Council)."
+Race wheels,BBS standardised design 18” magnesium wheels
+Cooling systems,"Charge air, engine oil, gearbox oil, hydraulic oil, water, and ERS cooling systems"
+Additive Manufacturing,Stratasys 3D printing & additive manufacturing
+Power Unit type,Mercedes-AMG M14 E Performance
+Minimum weight,151kg
+Primary PU components,Internal combustion engine (ICE)
+"Primary PU components
+
+   INTERNAL COMBUSTION ENGINE","Motor Generator Unit – Kinetic (MGU-K)
+
+   Motor Generator Unit – Heat (MGU-H)
+
+   Turbocharger (TC)
+
+   Energy Store (ES) 
+
+   Control Electronics (CE)"
+Capacity,1.6 litres
+Cylinders,Six
+Bank angle,90 degree vee angle
+No of valves,24
+Max speed,"15,000 rpm"
+Max fuel flow rate,"100kg/hour (above 10,500 rpm)"
+Fuel injection,"High-pressure direct injection (max 500 bar, one injector/cylinder)"
+Pressure charging,"Single-stage compressor and exhaust turbine, on a common shaft"
+Max rpm Exhaust Turbine,"125,000 rpm"
+Architecture,Integrated hybrid energy recovery via motor generator units
+"Architecture
+
+   Energy store","Crankshaft coupled electrical MGU-K
+
+   Turbocharger coupled electrical MGU-H 
+
+   Lithium-Ion battery solution of minimum 20 kg regulation weight"
+"Energy store
+
+   MGU-K","Maximum energy storage, 4 MJ per lap 
+
+   Maximum speed, 50,000 rpm"
+"MGU-K
+
+   MGU-H","Maximum power, 120 kW
+
+   Maximum energy recovery, 2 MJ per lap
+
+   Maximum energy deployment, 4 MJ per lap 
+
+   Maximum speed 125,000 rpm"
+"MGU-H
+
+   TRANSMISSION","Maximum power, unlimited
+
+   Maximum energy recovery, unlimited
+
+   Maximum energy deployment, unlimited"
+Gearbox,"Carbon-fibre composite gearbox casing,"
+"Gearbox
+
+   Gear ratios","longitudinally mounted change gear cluster 
+
+   Eight forward and one reverse"
+Gear selection,Electro-hydraulically operated seamless shift
+Differential,Limited slip friction clutch epicyclic
+Clutch,"Electro-hydraulically operated, carbon multi-plate"
+Transport,Mercedes-Benz trucks
+Logistics,DP World

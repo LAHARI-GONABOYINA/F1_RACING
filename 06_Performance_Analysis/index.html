@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Performance Analysis | F1 Racing</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    padding: 50px 8%;
+    background: linear-gradient(135deg, #111111, #1b1b1b);
+    border-bottom: 2px solid #e10600;
+}
+
+.back {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.back:hover {
+    color: #e10600;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #bbbbbb;
+    font-size: 17px;
+}
+
+.container {
+    width: 84%;
+    margin: 40px auto;
+}
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e10600;
+    padding-left: 12px;
+}
+
+.section p {
+    color: #cccccc;
+    font-size: 16px;
+    max-width: 1050px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #e10600;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+.stat {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #151515;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    background: #222222;
+}
+
+td {
+    color: #cccccc;
+}
+
+.result {
+    background: #151515;
+    border-left: 4px solid #e10600;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.result p {
+    margin-bottom: 12px;
+}
+
+.file-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.file-link:hover {
+    background: #b80500;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #292929;
+    color: #888888;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<a href="../index.html" class="back">
+← Back to F1 Racing
+</a>
+
+<h1>PERFORMANCE ANALYSIS</h1>
+
+<p class="subtitle">
+Analysis of Formula 1 race performance, points, wins and team results
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="section">
+
+<h2>What We Did</h2>
+
+<p>
+The performance analysis stage focuses on analyzing Formula 1
+team and race performance using the data collected through
+web scraping. The analysis includes championship points,
+race wins and season-to-season team performance.
+</p>
+
+</div>
+
+
+<!-- PROCESS -->
+
+<div class="section">
+
+<h2>Performance Analysis Process</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>01. Collect Performance Data</h3>
+
+<p>
+Race results, team standings and other performance information
+were collected from Formula 1 web sources.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>02. Prepare Race Results</h3>
+
+<p>
+The scraped race results were organized into a structured
+format for further analysis.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>03. Analyze Team Points</h3>
+
+<p>
+Constructor championship points were compared across
+the selected seasons.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>04. Analyze Race Wins</h3>
+
+<p>
+The number of race victories was compared to evaluate
+changes in team performance.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>05. Compare Teams</h3>
+
+<p>
+McLaren and Mercedes performance was compared across
+the 2024 and 2025 seasons.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>06. Visualize Results</h3>
+
+<p>
+Performance trends and comparisons were represented using
+charts and graphs.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- KEY RESULTS -->
+
+<div class="section">
+
+<h2>Key Performance Results</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="stat">
+666
+</div>
+
+<div class="stat-label">
+McLaren Points — 2024
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="stat">
+833
+</div>
+
+<div class="stat-label">
+McLaren Points — 2025
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="stat">
+6
+</div>
+
+<div class="stat-label">
+McLaren Wins — 2024
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="stat">
+14
+</div>
+
+<div class="stat-label">
+McLaren Wins — 2025
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEAM COMPARISON -->
+
+<div class="section">
+
+<h2>Team Performance Comparison</h2>
+
+<table>
+
+<tr>
+
+<th>Team</th>
+<th>Season</th>
+<th>Championship Points</th>
+<th>Race Wins</th>
+
+</tr>
+
+
+<tr>
+
+<td>McLaren</td>
+<td>2024</td>
+<td>666</td>
+<td>6</td>
+
+</tr>
+
+
+<tr>
+
+<td>McLaren</td>
+<td>2025</td>
+<td>833</td>
+<td>14</td>
+
+</tr>
+
+
+<tr>
+
+<td>Mercedes</td>
+<td>2024</td>
+<td>468</td>
+<td>4</td>
+
+</tr>
+
+
+<tr>
+
+<td>Mercedes</td>
+<td>2025</td>
+<td>469</td>
+<td>2</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- MCLAREN PERFORMANCE -->
+
+<div class="section">
+
+<h2>McLaren Performance Change</h2>
+
+<div class="result">
+
+<p>
+McLaren's championship points increased from
+<strong>666 points in 2024</strong> to
+<strong>833 points in 2025</strong>.
+</p>
+
+<p>
+This represents an increase of approximately
+<strong>25.08%</strong>.
+</p>
+
+<p>
+McLaren race wins increased from
+<strong>6 wins</strong> in 2024 to
+<strong>14 wins</strong> in 2025.
+</p>
+
+<p>
+This represents an increase of approximately
+<strong>133.33%</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- MERCEDES PERFORMANCE -->
+
+<div class="section">
+
+<h2>Mercedes Performance</h2>
+
+<div class="result">
+
+<p>
+Mercedes recorded <strong>468 points</strong> in 2024
+and <strong>469 points</strong> in 2025.
+</p>
+
+<p>
+The points changed only slightly between the two seasons.
+</p>
+
+<p>
+Mercedes recorded 4 wins in 2024 and 2 wins in 2025,
+showing a decrease in race victories.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VISUALIZATIONS -->
+
+<div class="section">
+
+<h2>Performance Visualizations</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>McLaren Points Comparison</h3>
+
+<p>
+Comparison of McLaren championship points between
+2024 and 2025.
+</p>
+
+<a href="../08_Visualizations/12_mclaren_points_comparison.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>McLaren Wins Comparison</h3>
+
+<p>
+Comparison of McLaren race wins between the two seasons.
+</p>
+
+<a href="../08_Visualizations/12_mclaren_wins_comparison.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Points Comparison</h3>
+
+<p>
+Comparison of championship points between McLaren
+and Mercedes.
+</p>
+
+<a href="../08_Visualizations/16_team_points_comparison.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Wins Comparison</h3>
+
+<p>
+Comparison of race wins between McLaren and Mercedes.
+</p>
+
+<a href="../08_Visualizations/16_team_wins_comparison.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Points Trend</h3>
+
+<p>
+Season-to-season team championship points trend.
+</p>
+
+<a href="../08_Visualizations/20_team_points_trend.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Wins Trend</h3>
+
+<p>
+Season-to-season team race wins trend.
+</p>
+
+<a href="../08_Visualizations/20_team_wins_trend.png"
+target="_blank"
+class="file-link">
+
+View Chart
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DATA FILES -->
+
+<div class="section">
+
+<h2>Performance Analysis Files</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Race Results</h3>
+
+<p>
+Raw race-level performance data collected from Formula 1
+sources.
+</p>
+
+<a href="../02_Raw_Data/f1_race_results_raw.csv"
+target="_blank"
+class="file-link">
+
+Open CSV
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Standings</h3>
+
+<p>
+Raw constructor championship standings used for
+team performance analysis.
+</p>
+
+<a href="../02_Raw_Data/f1_team_standings_raw.csv"
+target="_blank"
+class="file-link">
+
+Open CSV
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Team Wins</h3>
+
+<p>
+Dataset containing calculated team race wins.
+</p>
+
+<a href="../06_Performance_Analysis/f1_team_wins.csv"
+target="_blank"
+class="file-link">
+
+Open CSV
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Multi-Team Performance</h3>
+
+<p>
+Performance comparison of selected teams across seasons.
+</p>
+
+<a href="../06_Performance_Analysis/f1_multiteam_performance.csv"
+target="_blank"
+class="file-link">
+
+Open CSV
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FINDINGS -->
+
+<div class="section">
+
+<h2>Performance Findings</h2>
+
+<div class="result">
+
+<p>
+<strong>McLaren:</strong> The team remained first in the
+constructor standings in both analyzed seasons.
+</p>
+
+<p>
+McLaren's points increased by approximately
+<strong>25.08%</strong> from 2024 to 2025.
+</p>
+
+<p>
+McLaren's race wins increased by approximately
+<strong>133.33%</strong>.
+</p>
+
+<p>
+<strong>Mercedes:</strong> Championship points remained
+almost unchanged, increasing from 468 to 469.
+</p>
+
+<p>
+The comparison shows a substantial improvement in McLaren's
+measured performance between the two seasons.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- NEXT STEP -->
+
+<div class="section">
+
+<h2>Next Step</h2>
+
+<p>
+The next stage combines technical specifications with
+performance results to examine whether observed technical
+changes are associated with changes in team performance.
+</p>
+
+<a href="../07_Technical_vs_Performance/index.html"
+class="file-link">
+
+Go to Technical vs Performance →
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+F1 Racing — Web Scraping & Product Analysis System
+
+</footer>
+
+
+</body>
+
+</html>

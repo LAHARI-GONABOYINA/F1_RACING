@@ -1,0 +1,19 @@
+Season,Car,Specification,Numeric_Value,Unit
+2024,MCL38,Weight,798.0,kg
+2025,MCL39,Weight,800.0,kg
+2024,MCL38,Minimum weight,151.0,kg
+2025,MCL39,Minimum weight,151.0,kg
+2024,MCL38,Capacity,1.6,litres
+2025,MCL39,Capacity,1.6,litres
+2024,MCL38,Bank angle,90.0,degree
+2025,MCL39,Bank angle,90.0,degree
+2024,MCL38,No of valves,24.0,valves
+2025,MCL39,No of valves,24.0,valves
+2024,MCL38,Max speed,15000.0,rpm
+2025,MCL39,Max speed,15000.0,rpm
+2024,MCL38,Max fuel flow rate,100.0,kg/hour
+2025,MCL39,Max fuel flow rate,100.0,kg/hour
+2024,MCL38,Fuel injection,500.0,bar
+2025,MCL39,Fuel injection,500.0,bar
+2024,MCL38,Race wheels,18.0,inch
+2025,MCL39,Race wheels,18.0,inch
